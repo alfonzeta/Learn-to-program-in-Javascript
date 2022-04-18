@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.player1,
+.player2 {
+    width: 5px;
+    background-color: black;
+    height: 50px;
+
+}
+
+.ball {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+}

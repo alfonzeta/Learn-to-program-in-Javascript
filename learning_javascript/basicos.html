@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basicos</title>
+</head>
+
+<body>
+    <h1>Fundamentos JS</h1>
+    <h3>Prueba live server</h3>
+    <script>
+        //Concatenación
+        console.log("Concatenación");
+        let nombre = "Alfonso";
+        let apellido = "Zeta";
+        console.log(nombre);
+        console.log(apellido);
+        let saludo = "Mi nombre es " + nombre + " " + apellido + "."
+        console.log(saludo);
+
+        //Interpolación de variables
+        //Template String
+        console.log("Interpolación");
+        let saludo2 = `Hola, mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2);
+
+        let ul = "<ul><ol>Invierno</ol><ol>Primavera</ol><ol>Verano</ol><ol>Otoño</ol></ul>";
+
+        let ul2 = `
+        <ul>
+          <ol>Otoño</ol>
+          <ol>Invierno</ol>
+          <ol>Primavera</ol>
+          <ol>Verano</ol>
+        </ul> 
+        `
+        console.log(ul2);
+
+        let ul3 = "<ul>";
+        ul3 += "<ol>Otoño</ol>"
+        ul3 += "<ol>Invierno</ol>"
+        ul3 += "<ol>Primavera</ol>"
+        ul3 += "<ol>Verano</ol>"
+        ul3 += "</ul>";
+
+        console.log(ul3);
+    </script>
+</body>
+
+</html>
