@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS Mircha 10 - Functions</title>
+</head>
+
+<body>
+    <h1>Practicando con funciones</h1>
+    <script>
+
+        //Declaración de función
+        function estoEsUnaFuncion() {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+
+            //Invocación de función
+        }
+        console.log("Invocación1"); estoEsUnaFuncion();
+        console.log("Invocación2"); estoEsUnaFuncion();
+
+        //Función con valores
+        x = 1
+        y = 2
+        h = 3
+        function estoesunaFuncionConValores() {
+            console.log(x);
+            console.log(y);
+            console.log(h);
+        }
+        console.log("Invocaciónconvalores"); estoesunaFuncionConValores();
+
+        //Función "que devuelve valores"
+        function estoEsUnaFuncionQueDevuelveValor() {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+            return "La función ha retornado una cadena de texto"
+        }
+        console.log("Invocación de función que devuelve valor"); estoEsUnaFuncionQueDevuelveValor();
+
+        let valorDeFuncion = estoEsUnaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion);
+
+        //Función que devuelve valores finalizada por return
+        console.log("pruebareturn");
+        function estoEsUnaFuncionQueDevuelveValorFinalizadaPorReturn() {
+            console.log("Uno");
+            return 20;
+            console.log("Dos");
+            console.log("Tres");
+            return "La función ha retornado una cadena de texto"
+        }
+        console.log("Invocación de función que devuelve valor finalizada por return"); estoEsUnaFuncionQueDevuelveValorFinalizadaPorReturn();
+
+        let valorDeFuncionFinalizadaPorReturn = estoEsUnaFuncionQueDevuelveValorFinalizadaPorReturn();
+        console.log(valorDeFuncion);
+
+        //prueba función saludar
+        function saludar(nombre, edad) {
+            console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        saludar("Alfonso", 27)
+        saludar();
+        saludar(x, 27);
+        saludar(x, h);
+        saludar(x, h * y);
+        //prueba función saludar undefined
+        function saludarUndefined(nombre = "Desconocido", edad = "0") {
+            console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        saludarUndefined("Alfonso", 27)
+        saludarUndefined();
+
+        //Funciones declaradas VS funciones expresadas
+        funcionDeclarada();
+        function funcionDeclarada() {
+            console.log("Esto es una función declarada que puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+        }
+        funcionDeclarada();
+
+        //función anónima
+        //funcionExpresada();
+        const funcionExpresada = function () {
+            console.log("Estp es una función expresada, es decir, una función que se le ha asignado como valor a una variable. si invocamos esta función antes de su definición JS nos dirá Curso JS Mircha 10.html:87 Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization")
+        }
+        funcionExpresada();
+
+    </script>
+</body>
+
+</html>
