@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS MIRCHA 11</title>
+</head>
+
+<body>
+
+    <h1 style="background-color: red;">Clase 11 - Arrays</h1>
+    <p>Practicando lo aprendido en mimo también</p>
+    <script>
+        //Creando arreglos y comprobando en la consola
+        let array = [];
+        let number = 2;
+        let boolean = false;
+        console.log(array);
+        console.log(number);
+        console.log(boolean);
+
+        console.log(typeof array);
+        console.log(typeof number);
+        console.log(typeof boolean);
+        //Forma 1 de crear arreglos y jugando con las formas de invocarlos
+        const a = [];
+        console.log(a);
+        const b = [1, true, "hola", ["A", "B", "C"]];
+        console.log(b);
+        console.log(b.length);
+        console.log(a.length);
+        console.log(b[2]);
+        console.log(b[0]);
+        console.log(b[3]);
+        console.log(b[3][0]);
+
+        const c = [1, true, "hola", ["A", "B", "C", [1, 2, 3]]];
+        console.log(c);
+        console.log(c[3][3][0]);
+
+        //Otra forma de crear arreglos. De esta forma accedemos al objeto/prototipo de array de JS.
+
+        const d = Array.of("X", "Y", "Z", 9, 8, 7);
+        console.log(d);
+
+        //Otra forma de crear arreglos con utilidad de relleno.
+
+        const e = Array(100).fill(number + 1);
+        console.log(e);
+
+        //Otras formas obsoletas 
+        const f = new Array();
+        console.log(f);
+        const g = new Array(1, 2, 3, true, false, "A");
+        console.log(g);
+
+        //Métodos con arrays
+        const colores = ["Rojo", "Verde", "Azul"];
+        console.log(colores);
+        //Método push
+        colores.push("Negro", "Amarillo");
+        console.log(colores);
+        //Método pop
+        colores.pop();
+        console.log(colores);
+        //Método for each funcional Wadefuk 
+        colores.forEach(function (el, index) {
+            console.log(`<li id="${index}">${el}</li>`);
+        })
+
+
+
+    </script>
+</body>
+
+</html>
