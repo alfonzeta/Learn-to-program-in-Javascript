@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13 curso JS Mircha</title>
+</head>
+
+<body>
+    <script>
+        //Operadores//
+
+        //Aritméticos +,-,*,/,%...//
+        let a = 5 + 5 - 10 * 3;
+        let modulo = 5 / 2;
+        let modulo2 = 5 % 2;
+        console.log(a);
+        console.log(modulo);
+        console.log(modulo2);
+
+        /*Relacionales <,>,=,<=,>=,==,===,!=,!==
+         = 1 igual es asignación de variable
+         == 2 iguales es comparación de valores
+         === 3 iguales es comparación de tipo de dato y de valor
+         Supuestamente es mejor práctica utilizar los 3 iguales que los 2 iguales.
+         
+         */
+        let b = 10 > 20;
+        let c = 10 >= 10;
+        let d = "hola" == "hola";
+        let e = "hello" == "hola";
+        let f = 10 === "10";
+        let g = 0 === true;
+        console.log(8 > 9);
+        console.log(9 > 8);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(f);
+        console.log(g);
+
+        //De incremento y/o decremento? :<
+        let h = 1;
+        h = h + 2;
+        console.log(h);
+        if (h < 10) {
+            console.log("h es menor que 10");
+        }
+        else
+            console.log("h es menor que 10");
+
+        h += 3
+        console.log(h);
+        h /= 3;
+        console.log(h);
+        h *= 3;
+        console.log(h);
+
+        //Operador Unario?? wtf
+
+        let i = 2;
+        i++;
+        console.log(i);
+        i--;
+        console.log(i);
+        ++i;
+        console.log(i);
+        --i;
+        console.log(i);
+
+        //Aquí el primer operador unario parece que lo suma pero no lo manda a la consola, y el segundo sí lo suma y lo manda. No lo entiendo honestamente. La recomendación es utilizar i++. 
+        console.log(i++);
+        console.log(++i);
+
+        //Operadores lógicos 
+        //!Not - Niega, lo que es verdadero lo vuelve falso y viceversa.
+        console.log(true);
+        console.log(!true);
+
+        //|| Or
+        console.log((9 === 9) || ("9" === "9"));
+        console.log((9 === 10) || ("10" === "9"));
+
+        //&& And
+        console.log((9 === "9") && ("10" === "10"));
+
+
+    </script>
+</body>
+
+</html>

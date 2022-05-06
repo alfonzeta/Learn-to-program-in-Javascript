@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12 curso JS Mircha</title>
+</head>
+
+<body>
+    <script>
+        let a = new String("Hola");
+        console.log(a);
+        console.log([]);
+        console.log({});
+        const b = {}
+        console.log(b);
+
+        //prototipo object, aparentemente obsoleto
+        const c = new Object();
+        console.log(c);
+
+        //Dentro de un objeto a las variables se les van a llamar atributos/propiedades y a las funciones se les llama métodos
+
+        const alfon = {
+            nombre: "Alfonso",
+            apellido: "Zeta",
+            edad: 27,
+            pasatiempos: ["Cantar", "Deporte", "Programar"],
+            millonario: false,
+            contacto: {
+                email: "alfonso@wetmail.com",
+                address: "Black nose street 23",
+                mobilePhone: "65024578505",
+            },
+            saludar: function () {
+                console.log('hola :)');
+            },
+            decirMiNombre: function () {
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años. Mis pasatiempos son ${this.pasatiempos}, y mi correo electrónico es ${this.contacto.email}.`);
+            }
+
+        }
+        console.log(alfon);
+        console.log(alfon["nombre"]);
+        console.log(alfon["millonario"]);
+        //Forma más aceptada:
+        console.log(alfon.apellido);
+        console.log(alfon.millonario);
+        console.log(alfon.pasatiempos);
+        console.log(alfon.pasatiempos[1]);
+
+        console.log(alfon.contacto["email"]);
+        console.log(alfon.contacto.address);
+
+        alfon.saludar();
+        alfon.decirMiNombre();
+
+        console.log(Object.keys(alfon));
+        console.log(Object.values(alfon));
+        console.log(Object.getOwnPropertyNames(alfon));
+        console.log(alfon.hasOwnProperty("nombre"));
+        console.log(alfon.hasOwnProperty("nacionalidad"));
+
+    </script>
+</body>
+
+</html>
