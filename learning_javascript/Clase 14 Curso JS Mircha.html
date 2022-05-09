@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14 curso JS Mircha</title>
+</head>
+
+<body>
+
+    <h1>Introduce una hora</h1>
+    <script>
+        //IF - ELSE
+        let edad = 18;
+
+        if (edad > 17) {
+            console.log("Eres mayor de edad");
+        } else {
+            console.log("Eres menor de edad");
+
+        }
+
+        if (edad >= 18) {
+            console.log("Eres mayor de edad");
+        } else {
+            console.log("Eres menor de edad");
+
+        }
+
+        if (edad < 18) {
+            console.log("Eres menor de edad");
+        } else {
+            console.log("Eres mayor de edad");
+
+        }
+
+        //IF / ELSE IF / ELSE
+        /*00hrs - 07hrs = Modo descanso activado
+        07hrs - 15hrs = Modo trabajo activado
+        15hrs - 17hrs = Modo comida y descanso activado
+        17hrs - 00hrs = Modo recreativo activado
+        */
+        const input = prompt("Qué hora es?");
+        alert(`Son las ${input}`);
+
+        if (input >= 0 && input < 7) {
+            console.log("Modo descanso activado");
+        } else if (input >= 7 && input < 15) {
+            console.log("Modo trabajo activado");
+        } else if (input >= 15 && input < 17) {
+            console.log("Modo comida y descanso activado");
+        } else if (input >= 17 && input < 24) {
+            console.log("Modo recreativo activado");
+        } else {
+            console.log("Esa hora no es válida");
+        }
+
+        //Operador ternario (Condición) ? verdadero : falsa
+        const inputEdad = prompt("Qué edad tienes?");
+        console.log("Operador Ternario");
+        let mayoriaDeEdad = (inputEdad >= 18)
+            ? "Eres mayor de edad"
+            : "Eres menor de edad";
+        console.log(mayoriaDeEdad);
+
+        /*         Switch - case
+                domingo - 0
+                lunes - 1
+                martes - 2
+                miercoles - 3
+                jueves - 4 
+                viernes - 5
+                sabado - 6 */
+        let dia = 22;
+        switch (dia) {
+            case 0:
+                console.log("domingo");
+                break;
+            case 1:
+                console.log("lunes");
+                break;
+            case 2:
+                console.log("martes");
+                break;
+            case 3:
+                console.log("miércoles");
+                break;
+            case 4:
+                console.log("jueves");
+                break;
+            case 5:
+                console.log("viernes");
+                break;
+            case 6:
+                console.log("sábado");
+                break;
+
+            default:
+                console.log("El día no existe");
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>
