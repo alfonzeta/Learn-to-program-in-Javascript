@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 15 curso JS Mircha - Loops</title>
+</head>
+
+<body>
+    <script>
+        //While y do son estructuras un poco en desuso aparentemente
+        let contador = 0;
+
+        while (contador < 5) {
+            console.log(contador);
+            contador++;
+        }
+
+        let contadorDo = 0;
+        do {
+            console.log("contador Do es " + contadorDo);
+            contadorDo++;
+        } while (contadorDo < 5);
+
+        //En este caso el while tiene la condición al principio por lo que no se ejecuta. En el caso de do se ejecuta y al cumplirse la condición deja de ejecutarse.  
+        let contadorDoWhile = 5;
+
+        while (contadorDoWhile < 5) {
+            console.log(contadorDoWhile);
+            contadorDoWhile++;
+        }
+        do {
+            console.log("Contador DoWhile es " + contadorDoWhile);
+            contadorDoWhile++;
+        } while (contadorDoWhile < 5);
+
+        /*         For
+                for (inicialización de variable; condición; deceremento o incremento){
+                    sentencia 1 que ejecuta el for
+                    sentencia 2 que ejecuta el for 
+                } */
+
+        for (let index = 0; index < 5; index++) {
+            console.log("for" + index);
+        }
+
+        let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        console.log(numeros[2]);
+        for (let index = 0; index < 101; index++) {
+            console.log(index);
+        }
+        for (let index = 0; index < numeros.length; index++) {
+            console.log(numeros[index]);
+        }
+
+        //forin
+        const alfon = {
+            nombre: "Alfonso",
+            apellido: "Zeta",
+            edad: "27",
+        }
+        for (const propiedad in alfon) {
+            console.log(`Key: ${propiedad}, Value: ${alfon[propiedad]}`);
+        }
+
+        /* forof */
+        for (const elemento of numeros) {
+            console.log(elemento);
+        }
+
+        let cadenaTexto = "Hola Mundo";
+        for (const caracteres of cadenaTexto) {
+            console.log(caracteres);
+        }
+
+    </script>
+    break
+</body>
+
+</html>
