@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 19 Curso JS Mircha - Objetos literales</title>
+</head>
+
+<body>
+    <script>
+        let = nombre = "Alfonso";
+        edad = 27;
+
+        const yo = {
+            nombre: nombre,
+            edad: edad,
+            saludar: function () {
+                console.log("Hola");
+            }
+        }
+        console.log(yo);
+        yo.saludar();
+        let me1 = {
+            nombre: nombre,
+            edad: edad,
+            saludar: function () {
+                console.log("Hi");
+            }
+        }
+        console.log(me1);
+        me1.saludar();
+
+        const me2 = {
+            nombre,
+            edad,
+            colorDePelo: "rojo",
+            saludar() {
+                console.log("Helloo");
+            }
+        }
+        console.log(me2);
+        me2.saludar();
+    </script>
+</body>
+
+</html>
