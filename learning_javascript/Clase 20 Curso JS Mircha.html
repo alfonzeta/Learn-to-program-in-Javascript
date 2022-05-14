@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 20 curso JS Mircha - Parámetros REST & Operador Spread</title>
+</head>
+
+<body>
+    <script>
+        //Parámetro REST ...
+        function sumar(a, b, ...c) {
+            let resultado = a + b
+            c.forEach(function (n) {
+                resultado += n
+            });
+
+            return resultado;
+        }
+        console.log(sumar(1, 2));
+        console.log(sumar(1, 2, 3));
+        console.log(sumar(1, 2, 3, 4));
+        console.log(sumar(1, 2, 3, 4, 5));
+        console.log(sumar(1, 2, 3, 4, 5, 100));
+
+        //Operador Spread o de propagación
+
+        const arregloUno = [1, 2, 3, 4, 5],
+            arregloDos = [6, 7, 8, 9, 0];
+
+        console.log(arregloUno, arregloDos);
+
+        const arregloTres = [...arregloUno, ...arregloDos]
+        console.log(arregloTres);
+    </script>
+</body>
+
+</html>
