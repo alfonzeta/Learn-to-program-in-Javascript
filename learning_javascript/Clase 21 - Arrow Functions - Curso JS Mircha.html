@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 21 Curso JS Mircha - Arrow Functions</title>
+</head>
+
+<body>
+
+    <head>
+        <title>Clase 21 Curso JS Mircha</title>
+    </head>
+    <h1>Clase 21 Curso JS Mircha</h1>
+    <script>
+        //Funciones arrow es una nueva forma de definir una función anónima.
+        /* Función expresada
+        saludo(); daría error porque no se ha declarado la función expresada todavía.*/
+        const saludo = function () {
+            console.log("Hola función expresada");
+        }
+        saludo();
+        console.log(saludo);
+
+        //Función declarada
+        saludar(); /* La función sí se imprime porque es función declarada, aunque no se haya expresado todavía. */
+        function saludar() {
+            console.log("Hola función declarada");
+        }
+        saludar();
+
+        /* Arrow Function 1*/
+        const saludarConArrow = () => {
+            console.log(`Hola, saludarConArrow`);
+        }
+        saludarConArrow();
+
+        /* Arrow Function 2*/
+        const saludarConArrowDos = () => console.log(`Hola, saludarConArrowDos`);
+
+        saludarConArrowDos();
+
+        /* Arrow Function 3*/
+
+        const greet = nombre => console.log(`Hola ${nombre}`);
+        greet("Alfonso");
+
+        /* Ejemplo función sin arrow function */
+        const sumar = function (a, b) {
+            return a + b;
+        }
+        console.log(sumar(8, 9));
+
+        /* Ejemplo función con arrow function antes de ver vídeo*/
+        const sumarArrow = (c, d) => console.log(c + d);
+        sumarArrow(10, 11);
+        /* Ejemplo función con arrow function después de ver vídeo*/
+        const sumarArrow2 = (e, f) => e + f;
+        console.log((sumarArrow(2, 3)));
+        sumarArrow2(5, 5); //Undefined?//
+
+        /* Función Arrow con varías lineas de código */
+        const sumarArrow3VariasLineas = () => {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        sumarArrow3VariasLineas();
+
+        /* For each sin arrow function */
+        const numeros = [1, 2, 3, 4, 5];
+        numeros.forEach(function (el, index) {
+            console.log(`El elemento ${el} está en la posición ${index}`);
+        })
+
+        /* For each con arrow function antes y después de ver el vídeo*/
+
+        numeros.forEach((el, index) => console.log(`${el} está en la posición ${index}`));
+
+        /* Arrow function en relación con objeto This
+        La función normal respeta el contexto con el que se encuentra, sin embargo, las arrow functions tienen la capacidad de saltarse el contexto en el que están (en este caso el objeto) y reconocer o heredar el contexto en donde se encuentra su objeto padre en el que ha sido declarada */
+
+        function perro() {
+            console.log(this);
+        }
+        perro();
+
+        const perro2 = {
+            nombre: "Rio",
+            ladrar: function () {
+                console.log(this);
+            }
+        }
+        perro2.ladrar();
+
+        const perro3Arrow = {
+            nombre: "Rio",
+            ladrar: () => {
+                console.log(this);
+            }
+        }
+        perro3Arrow.ladrar();
+
+
+    </script>
+</body>
+
+</html>
