@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 22 - Prototipos - Curso JS Mircha</title>
+</head>
+
+<body>
+    <script>
+        //Programación Orientada a Objetos
+        /* 4 Conceptos muy importantes:
+        Clases - Modelo a seguir.
+        Objetos - Es una instancia de una clase, una especie de copia de la clase que está en nuestra librería. 
+            Atributos - Es una característica o propiedad del objeto (son variables dentro de un objeto)
+            Métodos - Son las acciones que un objeto puede realizar (son funciones dentro de un objeto) */
+
+        //Creación de dos objetos, copiando y pegando. No es funcional. Para eso están las clases (siguiente sesión)
+        const animal = {
+            nombre: "Rio",
+            sonar() {
+                console.log("Te saludo saltando");
+            }
+        }
+        console.log(animal);
+
+        const animal2 = {
+            nombre: "Shiba",
+            sonar() {
+                console.log("Te cortejo chillando");
+            }
+        }
+        console.log(animal2);
+
+        //Cómo podría yo generar un prototipo en el cual basarme para generar n cantidad de "animal"?:
+        //Función constructora - Se construye una vez y a partir de ella creo nuevas instancias u objetos.
+
+        function Animal(nombre, tipo) {
+            //Atributos
+            this.nombre = nombre;
+            this.tipo = tipo;
+            //Métodos
+            this.sonar = function () {
+                console.log("Hago sonidos porque estoy vivo");
+            }
+            this.saludar = function () {
+                console.log(`Hola, me llamo ${this.nombre}`);
+            }
+        }
+
+        const Rio = new Animal("Río", "Perra"),
+            Dori = new Animal("Dori", "Tortuga");
+
+        console.log(Rio);
+        console.log(Dori);
+
+        Rio.sonar();
+        Rio.saludar();
+        Dori.sonar();
+        Dori.saludar();
+
+        //Después de media hora parece que este método no es el más óptimo porque al tener dentro de la función el "this.sonar", cada vez que genero una nueva instancia, se está duplicando ese método y todos los métodos que estuvieran incluídos.  
+        //Entonces, supuestamente entonces si tenemos funciones constructoras de las cuales pretendemos crear prototipos o instancias, lo ideal sería que nuestras funciones constructoras solamente tengan los atributos, los métodos los saquemos de la función y los peguemos al prototipo. 
+
+        //Función constructora donde asignamos los métodos al prototipo, no a la función como tal
+        function Animal2(nombre, tipo) {
+            //Atributos
+            this.nombre = nombre;
+            this.tipo = tipo;
+        }
+        //Métodos agregados al prototipo de la función constructora
+        Animal2.prototype.sonar = function () {
+            console.log("Hago sonidos porque estoy vivo");
+        }
+        Animal2.prototype.saludar = function () {
+            console.log(`Hola, me llamo ${this.nombre}`);
+        }
+
+        const Rio2 = new Animal2("Río2", "Perra"),
+            Dori2 = new Animal2("Dori2", "Tortuga");
+
+        console.log(Rio);
+        console.log(Dori);
+
+        Rio2.sonar();
+        Rio2.saludar();
+        Dori2.sonar();
+        Dori2.saludar();
+
+    </script>
+</body>
+
+</html>
