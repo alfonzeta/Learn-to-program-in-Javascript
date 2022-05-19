@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 24 - Clases y Herencia - Curso JS Mircha</title>
+</head>
+
+<body>
+    <script>
+        /* function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+    
+            //Métodos
+            this.sonar = function () {
+                console.log("Hago sonidos porque estoy");
+            }
+    
+            this.saludar = function () {
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        } */
+
+        class Animal {
+            //El constructor es un método especial que se jeecuta en el momento de instaciar la clase
+            constructor(nombre, genero) {
+                //Atributos
+                this.nombre = nombre;
+                this.genero = genero;
+
+            }
+
+            //Métodos
+            sonar() {
+                console.log("Hago sonidos porque estoy VIVO");
+            }
+
+            saludar() {
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+
+        class Perro extends Animal {
+            constructor(nombre, genero, peso) {
+                //con el método super() se manda a llamar al constructor de la clase padre.
+                super(nombre, genero);
+                this.peso = peso;
+            }
+
+            sonar() {
+                console.log("Soy un perro y mi sonido es un ladrido");
+            }
+
+            ladrar() {
+                console.log("GuauUUU");
+            }
+        }
+
+        const mini = new Animal("Mini", "Hembra"),
+            scooby = new Animal("scooby", "Macho"),
+            golfo = new Perro("Golfo", "Macho", 45);
+
+        console.log(mini);
+        mini.saludar();
+        mini.sonar();
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+
+        console.log(golfo);
+        golfo.saludar();
+        golfo.sonar();
+        golfo.ladrar();
+    </script>
+</body>
+
+</html>
